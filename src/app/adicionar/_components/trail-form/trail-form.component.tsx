@@ -1,36 +1,39 @@
-"use client";
+'use client';
 
-import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
-import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { ArrowRight, CalendarDays, MapPin, Mountain } from "lucide-react";
-import { addTrail, createTrailId } from "../../../_utils/trails/trails";
-import { trailFormStyles } from "./trail-form.styles";
-import type { TrailFormValues } from "./trail-form.types";
+import { Box, Button, Stack, TextField, Typography } from '@mui/material';
+import { ArrowRight, CalendarDays, MapPin, Mountain } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import type { FormEvent } from 'react';
+import { useState } from 'react';
+
+import { addTrail, createTrailId } from '@/app/_utils/trails/trails';
+
+import { trailFormStyles } from './trail-form.styles';
+import type { TrailFormValues } from './trail-form.types';
 
 const emptyValues: TrailFormValues = {
-  name: "",
-  location: "",
-  date: "",
+  name: '',
+  location: '',
+  date: '',
 };
 
 const fields = [
   {
-    key: "name" as const,
-    label: "Nome da trilha",
-    placeholder: "Ex.: Pico do Jaraguá",
+    key: 'name' as const,
+    label: 'Nome da trilha',
+    placeholder: 'Ex.: Pico do Jaraguá',
     icon: <Mountain size={19} />,
   },
   {
-    key: "location" as const,
-    label: "Local",
-    placeholder: "Ex.: São Paulo, SP",
+    key: 'location' as const,
+    label: 'Local',
+    placeholder: 'Ex.: São Paulo, SP',
     icon: <MapPin size={19} />,
   },
   {
-    key: "date" as const,
-    label: "Data",
-    placeholder: "",
+    key: 'date' as const,
+    label: 'Data',
+    placeholder: '',
     icon: <CalendarDays size={19} />,
   },
 ];
@@ -46,9 +49,9 @@ function TrailForm() {
     const validationErrors: Partial<TrailFormValues> = {};
 
     if (!values.name.trim())
-      validationErrors.name = "Informe o nome da trilha.";
-    if (!values.location.trim()) validationErrors.location = "Informe o local.";
-    if (!values.date) validationErrors.date = "Informe a data.";
+      validationErrors.name = 'Informe o nome da trilha.';
+    if (!values.location.trim()) validationErrors.location = 'Informe o local.';
+    if (!values.date) validationErrors.date = 'Informe a data.';
 
     setErrors(validationErrors);
 
@@ -61,7 +64,7 @@ function TrailForm() {
       date: values.date,
     });
 
-    router.push("/");
+    router.push('/');
   }
 
   return (
@@ -72,17 +75,17 @@ function TrailForm() {
       sx={trailFormStyles.form}
     >
       <Stack gap={3}>
-        {fields.map((field) => (
+        {fields.map(field => (
           <Box key={field.key}>
             <Typography
               component="label"
               htmlFor={field.key}
               sx={{
-                display: "flex",
-                alignItems: "center",
+                display: 'flex',
+                alignItems: 'center',
                 gap: 1,
                 mb: 1,
-                color: "#274534",
+                color: '#274534',
                 fontSize: 14,
                 fontWeight: 700,
               }}
@@ -92,14 +95,14 @@ function TrailForm() {
             </Typography>
             <TextField
               id={field.key}
-              type={field.key === "date" ? "date" : "text"}
+              type={field.key === 'date' ? 'date' : 'text'}
               value={values[field.key]}
-              onChange={(event) => {
-                setValues((currentValues) => ({
+              onChange={event => {
+                setValues(currentValues => ({
                   ...currentValues,
                   [field.key]: event.target.value,
                 }));
-                setErrors((currentErrors) => ({
+                setErrors(currentErrors => ({
                   ...currentErrors,
                   [field.key]: undefined,
                 }));
@@ -109,11 +112,11 @@ function TrailForm() {
               helperText={errors[field.key]}
               fullWidth
               sx={{
-                "& .MuiOutlinedInput-root": {
-                  bgcolor: "#FAF8ED",
+                '& .MuiOutlinedInput-root': {
+                  bgcolor: '#FAF8ED',
                   borderRadius: 2.5,
                 },
-                "& .MuiInputBase-input": {
+                '& .MuiInputBase-input': {
                   fontSize: 16,
                   py: 1.6,
                 },
@@ -128,9 +131,9 @@ function TrailForm() {
           sx={{
             mt: 1,
             minHeight: 52,
-            bgcolor: "#173E29",
+            bgcolor: '#173E29',
             borderRadius: 2.5,
-            textTransform: "none",
+            textTransform: 'none',
             fontSize: 16,
             fontWeight: 700,
           }}

@@ -1,12 +1,16 @@
-import type { Metadata } from "next";
-import { CssBaseline } from "@mui/material";
-import Navigation from "./_components/navigation/navigation.component";
-import "./globals.css";
+import './globals.css';
+
+import { CssBaseline } from '@mui/material';
+import type { Metadata } from 'next';
+
+import Navigation from './_components/navigation/navigation.component';
+
 export const metadata: Metadata = {
-  title: "Trilhas — caminhos percorridos",
-  description: "Um registro pessoal das trilhas que já percorri.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  title: 'Trilhas — caminhos percorridos',
+  description: 'Um registro pessoal das trilhas que já percorri.',
+  icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
 };
+
 function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
@@ -18,4 +22,5 @@ function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     </html>
   );
 }
+
 export default RootLayout;

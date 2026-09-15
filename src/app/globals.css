@@ -1,14 +1,17 @@
 :root {
-  --font-display: Georgia, "Times New Roman", serif;
+  --font-display: Georgia, 'Times New Roman', serif;
   --background: #f3f1e6;
   --foreground: #173423;
 }
+
 * {
   box-sizing: border-box;
 }
+
 html {
   background: #f3f1e6;
 }
+
 body {
   margin: 0;
   min-height: 100dvh;
@@ -27,10 +30,12 @@ body {
   color: #173423;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 ::selection {
   background: #d9f2c8;
   color: #12351f;
 }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
