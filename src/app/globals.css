@@ -1,0 +1,40 @@
+:root {
+  --font-display: Georgia, "Times New Roman", serif;
+  --background: #f3f1e6;
+  --foreground: #173423;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  background: #f3f1e6;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background:
+    radial-gradient(
+      circle at 8% 3%,
+      rgba(162, 191, 130, 0.16),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 92% 90%,
+      rgba(43, 96, 63, 0.08),
+      transparent 28rem
+    ),
+    #f3f1e6;
+  color: #173423;
+  font-family: Arial, Helvetica, sans-serif;
+}
+::selection {
+  background: #d9f2c8;
+  color: #12351f;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
