@@ -3,7 +3,7 @@ import './globals.css';
 import { CssBaseline } from '@mui/material';
 import type { Metadata } from 'next';
 
-import Navigation from './_components/navigation/navigation.component';
+import Navigation from './_components/navigation-bar/navigation-bar.component';
 
 export const metadata: Metadata = {
   title: 'Trilhas — caminhos percorridos',

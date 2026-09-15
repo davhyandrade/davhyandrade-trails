@@ -4,8 +4,8 @@ import { Footprints, Home, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { navigationStyles } from './navigation.styles';
-import type { NavigationItem } from './navigation.types';
+import { navigationStyles } from './navigation-bar.styles';
+import type { NavigationItem } from './navigation-bar.types';
 
 const items: NavigationItem[] = [
   { href: '/', label: 'Minhas trilhas' },
