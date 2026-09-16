@@ -1,5 +1,5 @@
-import { Box, Stack, Typography } from '@mui/material';
-import { CalendarDays, MapPin, Mountain } from 'lucide-react';
+import { Box, Link, Stack, Typography } from '@mui/material';
+import { CalendarDays, Images, MapPin, Mountain, Route } from 'lucide-react';
 
 import { formatTrailDate } from '@/app/_utils/trails/trails';
 
@@ -72,24 +72,57 @@ function TrailCard({ trail, index }: TrailCardProps) {
         </Typography>
 
         <Stack gap={1.15}>
-          <Stack direction="row" gap={1} alignItems="center">
-            <MapPin size={17} />
-
-            <Typography sx={{ color: '#526158', fontSize: 14 }}>
-              {trail.location}
-            </Typography>
-          </Stack>
-
-          <Stack direction="row" gap={1} alignItems="center">
-            <CalendarDays size={17} />
-
-            <Typography
-              component="time"
-              dateTime={trail.date}
-              sx={{ color: '#526158', fontSize: 14 }}
-            >
-              {formatTrailDate(trail.date)}
-            </Typography>
+          {trail.location?.trim() && (
+            <Stack direction="row" gap={1} alignItems="center">
+              <MapPin size={17} />
+              <Typography sx={{ color: '#526158', fontSize: 14 }}>
+                {trail.location}
+              </Typography>
+            </Stack>
+          )}
+          {trail.estimatedDistanceKm !== undefined && (
+            <Stack direction="row" gap={1} alignItems="center">
+              <Route size={17} />
+              <Typography sx={{ color: '#526158', fontSize: 14 }}>
+                {trail.estimatedDistanceKm.toLocaleString('pt-BR')} km
+                (estimados)
+              </Typography>
+            </Stack>
+          )}
+          <Stack
+            direction="row"
+            gap={2}
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Stack direction="row" gap={1} alignItems="center">
+              <CalendarDays size={17} />
+              <Typography
+                component="time"
+                dateTime={trail.date}
+                sx={{ color: '#526158', fontSize: 14, whiteSpace: 'nowrap' }}
+              >
+                {formatTrailDate(trail.date)}
+              </Typography>
+            </Stack>
+            {trail.photosUrl && (
+              <Link
+                href={trail.photosUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: '#526158',
+                  fontSize: 14,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                <Images size={17} />
+                Ver fotos
+              </Link>
+            )}
           </Stack>
         </Stack>
       </Box>
