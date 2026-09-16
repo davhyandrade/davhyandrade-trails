@@ -50,7 +50,7 @@ function AddTrailPage() {
         Adicionar trilha
       </Typography>
       <Typography sx={{ color: '#617067', mt: 1.5, mb: 4, fontSize: 16 }}>
-        Guarde o caminho em três detalhes essenciais.
+        Registre o nome e a data. Se quiser, inclua local, distância e fotos.
       </Typography>
       <TrailForm />
     </Box>
