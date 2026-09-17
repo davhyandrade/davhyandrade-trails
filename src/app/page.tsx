@@ -34,7 +34,7 @@ function HomePage() {
               mb: 1.2,
             }}
           >
-            Diário de caminhos
+            Diário de caminhadas
           </Typography>
 
           <Typography
