@@ -2,6 +2,7 @@
 
 import { Button } from '@mui/material';
 import { Info, TriangleAlert } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 import InstallBanner from '@/app/_components/pwa-manager/install-banner/install-banner.component';
 import StickyBanner from '@/app/_components/pwa-manager/sticky-banner/sticky-banner.component';
@@ -18,11 +19,12 @@ function PwaManager() {
     handleDismissInstallBanner,
     handleUpdate,
   } = usePwaManager();
+  const isOfflinePage = usePathname() === '/offline';
 
   return (
     <>
       <StickyBanner
-        open={isOffline}
+        open={isOffline && !isOfflinePage}
         severity="warning"
         icon={<TriangleAlert size={20} />}
         slotProps={{
@@ -61,6 +63,7 @@ function PwaManager() {
           Boolean(installPrompt) &&
           !installBannerDismissed &&
           !isOffline &&
+          !isOfflinePage &&
           !waitingWorker
         }
         onInstall={handleInstall}
