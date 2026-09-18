@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import Navigation from './_components/navigation-bar/navigation-bar.component';
 
 export const metadata: Metadata = {
-  title: 'Trilhas — caminhos percorridos',
+  title: 'Caminhos percorridos',
   description: 'Um registro pessoal das trilhas que já percorri.',
   icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
 };
