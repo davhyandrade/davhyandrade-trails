@@ -1,7 +1,8 @@
 import './globals.css';
 
-import { CssBaseline } from '@mui/material';
 import type { Metadata } from 'next';
+
+import MuiProvider from '@/shared/lib/mui/theme/providers/mui.provider';
 
 import Navigation from './_components/navigation-bar/navigation-bar.component';
 
@@ -15,9 +16,10 @@ function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
       <body>
-        <CssBaseline />
-        <Navigation />
-        {children}
+        <MuiProvider>
+          <Navigation />
+          {children}
+        </MuiProvider>
       </body>
     </html>
   );
