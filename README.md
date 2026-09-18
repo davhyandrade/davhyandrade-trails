@@ -14,3 +14,4 @@ O JSON em `src/app/_data/trails.json` fornece os dados iniciais. Novas trilhas s
 ## Documentação
 
 - [Design system](docs/design-system.md)
+- [Padrão de commits](docs/commits.md)
