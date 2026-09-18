@@ -19,7 +19,7 @@ function AddTrailPage() {
       <Link href="/" style={{ textDecoration: 'none' }}>
         <Button
           component="span"
-          startIcon={<ArrowLeft size={17} />}
+          startIcon={<ArrowLeft size={18} />}
           sx={{ color: '#536B5B', textTransform: 'none', px: 0, mb: 3 }}
         >
           Voltar para as trilhas

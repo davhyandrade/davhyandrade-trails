@@ -22,19 +22,19 @@ const fields = [
     key: 'name' as const,
     label: 'Nome da trilha',
     placeholder: 'Ex.: Pico do Jaraguá',
-    icon: <Mountain size={19} />,
+    icon: <Mountain size={18} />,
   },
   {
     key: 'location' as const,
     label: 'Local',
     placeholder: 'Ex.: São Paulo, SP',
-    icon: <MapPin size={19} />,
+    icon: <MapPin size={18} />,
   },
   {
     key: 'date' as const,
     label: 'Data',
     placeholder: '',
-    icon: <CalendarDays size={19} />,
+    icon: <CalendarDays size={18} />,
   },
 ];
 
@@ -127,7 +127,7 @@ function TrailForm() {
         <Button
           type="submit"
           variant="contained"
-          endIcon={<ArrowRight size={19} />}
+          endIcon={<ArrowRight size={18} />}
           sx={{
             mt: 1,
             minHeight: 52,
