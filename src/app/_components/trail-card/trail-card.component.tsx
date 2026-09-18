@@ -73,7 +73,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
 
         <Stack gap={1.15}>
           <Stack direction="row" gap={1} alignItems="center">
-            <MapPin size={17} />
+            <MapPin size={18} />
 
             <Typography sx={{ color: '#526158', fontSize: 14 }}>
               {trail.location}
@@ -81,7 +81,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
           </Stack>
 
           <Stack direction="row" gap={1} alignItems="center">
-            <CalendarDays size={17} />
+            <CalendarDays size={18} />
 
             <Typography
               component="time"

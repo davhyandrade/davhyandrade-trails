@@ -39,7 +39,7 @@ function Navigation() {
               color: '#12351F',
             }}
           >
-            <Footprints size={21} />
+            <Footprints size={20} />
           </Box>
 
           <Typography
