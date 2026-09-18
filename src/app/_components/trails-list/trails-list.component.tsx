@@ -48,9 +48,9 @@ function TrailsList() {
   if (!trails.length)
     return (
       <Stack
-        alignItems="center"
-        textAlign="center"
         sx={{
+          alignItems: 'center',
+          textAlign: 'center',
           border: '1px dashed rgba(18,53,31,.24)',
           borderRadius: 4,
           px: 3,
@@ -58,7 +58,6 @@ function TrailsList() {
         }}
       >
         <Footprints size={34} />
-
         <Typography
           component="h2"
           sx={{
@@ -70,11 +69,9 @@ function TrailsList() {
         >
           Sua próxima memória começa na trilha.
         </Typography>
-
         <Typography sx={{ mt: 1, mb: 3, color: '#617067' }}>
           Ainda não há trilhas registradas neste navegador.
         </Typography>
-
         <Button
           component={Link}
           href="/adicionar"

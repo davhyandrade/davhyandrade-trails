@@ -18,10 +18,12 @@ function HomePage() {
     >
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
-        justifyContent="space-between"
-        alignItems={{ xs: 'flex-start', sm: 'flex-end' }}
-        gap={3}
-        sx={{ mb: { xs: 4, md: 5 } }}
+        sx={{
+          justifyContent: 'space-between',
+          alignItems: { xs: 'flex-start', sm: 'flex-end' },
+          gap: 3,
+          mb: { xs: 4, md: 5 },
+        }}
       >
         <Box>
           <Typography
@@ -69,7 +71,6 @@ function HomePage() {
           </Button>
         </Link>
       </Stack>
-
       <TrailsList />
     </Box>
   );

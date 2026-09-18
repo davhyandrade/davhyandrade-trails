@@ -74,7 +74,11 @@ function TrailForm() {
       onSubmit={handleSubmit}
       sx={trailFormStyles.form}
     >
-      <Stack gap={3}>
+      <Stack
+        sx={{
+          gap: 3,
+        }}
+      >
         {fields.map(field => (
           <Box key={field.key}>
             <Typography
