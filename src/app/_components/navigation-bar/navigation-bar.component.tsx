@@ -24,9 +24,11 @@ function Navigation() {
       <Box sx={navigationStyles.inner}>
         <Stack
           direction="row"
-          alignItems="center"
-          gap={1.25}
-          sx={{ display: { xs: 'none', md: 'flex' } }}
+          spacing={1}
+          sx={{
+            alignItems: 'center',
+            display: { xs: 'none', md: 'flex' },
+          }}
         >
           <Box
             sx={{
@@ -54,7 +56,12 @@ function Navigation() {
           </Typography>
         </Stack>
 
-        <Stack direction="row" gap={0.5}>
+        <Stack
+          direction="row"
+          sx={{
+            gap: 0.5,
+          }}
+        >
           {items.map((item, i) => {
             const active = pathname === item.href;
             const Icon = i ? Plus : Home;
