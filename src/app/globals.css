@@ -1,7 +1,5 @@
 :root {
   --font-display: Georgia, 'Times New Roman', serif;
-  --background: #f3f1e6;
-  --foreground: #173423;
 }
 
 * {
@@ -9,7 +7,7 @@
 }
 
 html {
-  background: #f3f1e6;
+  background: var(--mui-palette-background-canvas);
 }
 
 body {
@@ -18,22 +16,22 @@ body {
   background:
     radial-gradient(
       circle at 8% 3%,
-      rgba(162, 191, 130, 0.16),
+      var(--mui-palette-background-glowStart),
       transparent 24rem
     ),
     radial-gradient(
       circle at 92% 90%,
-      rgba(43, 96, 63, 0.08),
+      var(--mui-palette-background-glowEnd),
       transparent 28rem
     ),
-    #f3f1e6;
-  color: #173423;
+    var(--mui-palette-background-canvas);
+  color: var(--mui-palette-text-heading);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  background: #d9f2c8;
-  color: #12351f;
+  background: var(--mui-palette-secondary-main);
+  color: var(--mui-palette-secondary-contrastText);
 }
 
 @media (prefers-reduced-motion: reduce) {

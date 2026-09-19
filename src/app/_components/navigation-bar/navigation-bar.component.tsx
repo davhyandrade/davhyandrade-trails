@@ -37,8 +37,8 @@ function Navigation() {
               borderRadius: '50%',
               display: 'grid',
               placeItems: 'center',
-              bgcolor: '#D9F2C8',
-              color: '#12351F',
+              bgcolor: 'secondary.main',
+              color: 'secondary.contrastText',
             }}
           >
             <Footprints size={20} />
@@ -46,7 +46,7 @@ function Navigation() {
 
           <Typography
             sx={{
-              color: '#F6F4E8',
+              color: 'navigation.text',
               fontFamily: 'var(--font-display)',
               fontWeight: 700,
               fontSize: 24,
@@ -81,12 +81,12 @@ function Navigation() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: { xs: 0.25, md: 0.9 },
-                  color: active ? '#12351F' : 'rgba(246,244,232,.72)',
-                  bgcolor: active ? '#D9F2C8' : 'transparent',
+                  color: active ? 'secondary.contrastText' : 'navigation.muted',
+                  bgcolor: active ? 'secondary.main' : 'transparent',
                   textDecoration: 'none',
                   '&:hover': {
-                    color: active ? '#12351F' : '#fff',
-                    bgcolor: active ? '#D9F2C8' : 'rgba(255,255,255,.08)',
+                    color: active ? 'secondary.contrastText' : 'common.white',
+                    bgcolor: active ? 'secondary.main' : 'navigation.hover',
                   },
                 }}
               >

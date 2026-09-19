@@ -51,7 +51,9 @@ function TrailsList() {
         sx={{
           alignItems: 'center',
           textAlign: 'center',
-          border: '1px dashed rgba(18,53,31,.24)',
+          border: '1px dashed',
+          borderColor:
+            'color-mix(in srgb, var(--mui-palette-secondary-contrastText) 24%, transparent)',
           borderRadius: 4,
           px: 3,
           py: 8,
@@ -77,7 +79,11 @@ function TrailsList() {
           href="/adicionar"
           variant="contained"
           endIcon={<ArrowUpRight size={18} />}
-          sx={{ bgcolor: '#173E29', borderRadius: 99, textTransform: 'none' }}
+          sx={{
+            bgcolor: 'primary.main',
+            borderRadius: 99,
+            textTransform: 'none',
+          }}
         >
           Adicionar a primeira
         </Button>

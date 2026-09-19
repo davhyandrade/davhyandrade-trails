@@ -18,16 +18,17 @@ function AddTrailPage() {
     >
       <Link href="/" style={{ textDecoration: 'none' }}>
         <Button
+          color="info"
           component="span"
           startIcon={<ArrowLeft size={18} />}
-          sx={{ color: '#536B5B', textTransform: 'none', px: 0, mb: 3 }}
+          sx={{ color: 'text.secondary', textTransform: 'none', px: 0, mb: 3 }}
         >
           Voltar para as trilhas
         </Button>
       </Link>
       <Typography
         sx={{
-          color: '#52705D',
+          color: 'text.secondary',
           fontSize: 12,
           fontWeight: 800,
           letterSpacing: '.16em',
@@ -40,7 +41,7 @@ function AddTrailPage() {
       <Typography
         component="h1"
         sx={{
-          color: '#153823',
+          color: 'text.heading',
           fontFamily: 'var(--font-display)',
           fontSize: { xs: 40, sm: 52 },
           lineHeight: 1,
@@ -49,7 +50,9 @@ function AddTrailPage() {
       >
         Adicionar trilha
       </Typography>
-      <Typography sx={{ color: '#617067', mt: 1.5, mb: 4, fontSize: 16 }}>
+      <Typography
+        sx={{ color: 'text.secondary', mt: 1.5, mb: 4, fontSize: 16 }}
+      >
         Guarde o caminho em três detalhes essenciais.
       </Typography>
       <TrailForm />

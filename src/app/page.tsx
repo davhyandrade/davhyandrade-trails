@@ -28,7 +28,7 @@ function HomePage() {
         <Box>
           <Typography
             sx={{
-              color: '#52705D',
+              color: 'text.secondary',
               fontSize: 12,
               fontWeight: 800,
               letterSpacing: '.16em',
@@ -42,7 +42,7 @@ function HomePage() {
           <Typography
             component="h1"
             sx={{
-              color: '#153823',
+              color: 'text.heading',
               fontFamily: 'var(--font-display)',
               fontSize: { xs: 42, sm: 56 },
               lineHeight: 0.98,
@@ -56,13 +56,15 @@ function HomePage() {
 
         <Link href="/adicionar" style={{ textDecoration: 'none' }}>
           <Button
+            color="info"
             component="span"
             endIcon={<ArrowUpRight size={18} />}
             sx={{
-              color: '#173E29',
+              color: 'primary.main',
               textTransform: 'none',
               fontWeight: 700,
-              borderBottom: '1px solid #78927E',
+              borderBottom: '1px solid',
+              borderBottomColor: 'primary.light',
               borderRadius: 0,
               px: 0.25,
             }}
