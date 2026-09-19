@@ -1,3 +1,5 @@
+import { shadows } from '@/shared/lib/mui/theme/shadows/shadows.config';
+
 export const trailCardStyles = {
   card: {
     overflow: 'hidden',
@@ -5,11 +7,11 @@ export const trailCardStyles = {
     border: '1px solid',
     borderColor: 'divider',
     bgcolor: 'background.paper',
-    boxShadow: '0 16px 44px var(--mui-palette-shadow-card)',
+    boxShadow: shadows[1],
     transition: '180ms ease',
     '&:hover': {
       transform: 'translateY(-4px)',
-      boxShadow: '0 22px 56px var(--mui-palette-shadow-cardHover)',
+      boxShadow: shadows[5],
     },
   },
   art: {

@@ -1,8 +1,11 @@
 'use client';
 import { Box, Stack, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import { Footprints, Home, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
+import { colors } from '@/shared/lib/mui/theme/palette/colors/colors.constant';
 
 import { navigationStyles } from './navigation-bar.styles';
 import type { NavigationItem } from './navigation-bar.types';
@@ -81,12 +84,16 @@ function Navigation() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: { xs: 0.25, md: 0.9 },
-                  color: active ? 'secondary.contrastText' : 'navigation.muted',
+                  color: active
+                    ? 'secondary.contrastText'
+                    : alpha(colors.gray[200], 0.72),
                   bgcolor: active ? 'secondary.main' : 'transparent',
                   textDecoration: 'none',
                   '&:hover': {
                     color: active ? 'secondary.contrastText' : 'common.white',
-                    bgcolor: active ? 'secondary.main' : 'navigation.hover',
+                    bgcolor: active
+                      ? 'secondary.main'
+                      : alpha(colors.gray[50], 0.08),
                   },
                 }}
               >

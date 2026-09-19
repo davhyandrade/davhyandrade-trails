@@ -3,8 +3,6 @@ import type {} from '@mui/material/styles';
 interface NavigationPalette {
   background: string;
   text: string;
-  muted: string;
-  hover: string;
 }
 
 interface GradientColors {
@@ -37,7 +35,7 @@ declare module '@mui/material/styles' {
   }
 
   interface PaletteOptions {
-    navigation?: NavigationPalette;
-    artwork?: ArtworkPalette;
+    navigation: NavigationPalette;
+    artwork: ArtworkPalette;
   }
 }
