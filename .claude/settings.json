@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "ask": [
+      "Edit(src/shared/lib/mui/theme/palette/colors/colors.constant.ts)"
+    ]
+  }
+}
