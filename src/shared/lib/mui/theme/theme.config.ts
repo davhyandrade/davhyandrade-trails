@@ -2,4 +2,9 @@
 
 import { createTheme } from '@mui/material/styles';
 
-export const theme = createTheme({});
+import { palette } from './palette/palette.config';
+
+export const theme = createTheme({
+  cssVariables: { disableCssColorScheme: true },
+  palette,
+});
