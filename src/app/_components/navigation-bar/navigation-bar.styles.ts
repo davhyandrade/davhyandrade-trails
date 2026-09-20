@@ -4,7 +4,7 @@ export const navigationStyles = {
     inset: { xs: 'auto 0 0', md: 'auto' },
     top: { md: 0 },
     zIndex: 20,
-    backgroundColor: 'rgba(17,45,30,.96)',
+    backgroundColor: 'primary.background',
     backdropFilter: 'blur(14px)',
   },
   inner: {

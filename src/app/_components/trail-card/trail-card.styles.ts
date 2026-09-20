@@ -2,8 +2,9 @@ export const trailCardStyles = {
   card: {
     overflow: 'hidden',
     borderRadius: 4,
-    border: '1px solid rgba(18,53,31,.1)',
-    bgcolor: '#FFFDF5',
+    border: 1,
+    borderColor: 'divider',
+    bgcolor: 'background.paper',
     boxShadow: '0 16px 44px rgba(29,55,38,.08)',
     transition: '180ms ease',
     '&:hover': {
@@ -17,6 +18,6 @@ export const trailCardStyles = {
     p: 2.5,
     display: 'flex',
     alignItems: 'flex-end',
-    color: 'white',
+    color: 'common.white',
   },
 } as const;

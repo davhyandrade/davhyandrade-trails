@@ -1,8 +1,11 @@
 'use client';
 import { Box, Stack, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import { Footprints, Home, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
+import { colors } from '@/shared/lib/mui/theme/palette/colors/colors.constant';
 
 import { navigationStyles } from './navigation-bar.styles';
 import type { NavigationItem } from './navigation-bar.types';
@@ -37,8 +40,8 @@ function Navigation() {
               borderRadius: '50%',
               display: 'grid',
               placeItems: 'center',
-              bgcolor: '#D9F2C8',
-              color: '#12351F',
+              bgcolor: 'secondary.main',
+              color: 'secondary.contrastText',
             }}
           >
             <Footprints size={20} />
@@ -46,7 +49,7 @@ function Navigation() {
 
           <Typography
             sx={{
-              color: '#F6F4E8',
+              color: 'primary.contrastText',
               fontFamily: 'var(--font-display)',
               fontWeight: 700,
               fontSize: 24,
@@ -81,12 +84,16 @@ function Navigation() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: { xs: 0.25, md: 0.9 },
-                  color: active ? '#12351F' : 'rgba(246,244,232,.72)',
-                  bgcolor: active ? '#D9F2C8' : 'transparent',
+                  color: active
+                    ? 'secondary.contrastText'
+                    : alpha(colors.white[0], 0.72),
+                  bgcolor: active ? 'secondary.main' : 'transparent',
                   textDecoration: 'none',
                   '&:hover': {
-                    color: active ? '#12351F' : '#fff',
-                    bgcolor: active ? '#D9F2C8' : 'rgba(255,255,255,.08)',
+                    color: active ? 'secondary.contrastText' : 'common.white',
+                    bgcolor: active
+                      ? 'secondary.main'
+                      : alpha(colors.white[0], 0.08),
                   },
                 }}
               >

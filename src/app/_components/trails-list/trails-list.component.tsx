@@ -1,5 +1,7 @@
 'use client';
+
 import { Box, Button, Skeleton, Stack, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import { ArrowUpRight, Footprints } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -48,14 +50,16 @@ function TrailsList() {
   if (!trails.length)
     return (
       <Stack
-        sx={{
+        sx={theme => ({
           alignItems: 'center',
           textAlign: 'center',
-          border: '1px dashed rgba(18,53,31,.24)',
+          borderWidth: 1,
+          borderStyle: 'dashed',
+          borderColor: alpha(theme.palette.secondary.contrastText, 0.24),
           borderRadius: 4,
           px: 3,
           py: 8,
-        }}
+        })}
       >
         <Footprints size={34} />
         <Typography
@@ -77,7 +81,11 @@ function TrailsList() {
           href="/adicionar"
           variant="contained"
           endIcon={<ArrowUpRight size={18} />}
-          sx={{ bgcolor: '#173E29', borderRadius: 99, textTransform: 'none' }}
+          sx={{
+            bgcolor: 'primary.main',
+            borderRadius: 99,
+            textTransform: 'none',
+          }}
         >
           Adicionar a primeira
         </Button>
