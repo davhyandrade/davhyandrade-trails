@@ -1,11 +1,13 @@
 # Padrão de commits
 
-As mensagens seguem o formato `tipo(escopo): descrição`.
+As mensagens seguem o formato `tipo(escopo): descrição`, sempre em uma
+única linha, sem corpo.
 
 - Para refatorações, use `refact`, não `refactor`.
 - A descrição começa com um verbo em inglês na terceira pessoa do singular
   do presente, como `adds`, `updates`, `fixes` ou `standardizes`.
-- O escopo identifica a área ou o componente alterado.
+- O escopo é opcional; quando usado, identifica a área ou o componente
+  alterado (`tipo: descrição`, sem escopo, também é válido).
 
 ## Tipos
 
@@ -26,4 +28,5 @@ fix(navigation): corrects active link detection
 refact(DS): standardizes icon sizes
 chore(deps): upgrades MUI to v9
 test(trails): adds required field validation tests
+chore: updates gitignore
 ```
