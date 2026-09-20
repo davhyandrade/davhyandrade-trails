@@ -1,4 +1,4 @@
-# Trilhas
+# Minhas Trilhas
 
 Aplicação pessoal para registrar e visualizar trilhas realizadas.
 

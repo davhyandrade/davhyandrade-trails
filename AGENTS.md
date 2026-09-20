@@ -1,4 +1,4 @@
-# Minhas trilhas — instruções para agentes de IA
+# Minhas Trilhas — instruções para agentes de IA
 
 ## Design system
 
