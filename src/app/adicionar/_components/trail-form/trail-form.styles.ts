@@ -5,6 +5,6 @@ export const trailFormStyles = {
     bgcolor: 'background.paper',
     border: 1,
     borderColor: 'divider',
-    boxShadow: '0 20px 60px rgba(29,55,38,.1)',
+    boxShadow: 3,
   },
 } as const;
