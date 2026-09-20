@@ -1,15 +1,17 @@
 import { Box, Stack, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import { CalendarDays, MapPin, Mountain } from 'lucide-react';
 
 import { formatTrailDate } from '@/app/_utils/trails/trails';
+import { colors } from '@/shared/lib/mui/theme/palette/colors/colors.constant';
 
 import { trailCardStyles } from './trail-card.styles';
 import type { TrailCardProps } from './trail-card.types';
 
 const gradients = [
-  'linear-gradient(145deg,#143C29,#2F6844 55%,#92B86B)',
-  'linear-gradient(145deg,#253F32,#52795A 55%,#C4A568)',
-  'linear-gradient(145deg,#173C31,#326657 58%,#8FAE9A)',
+  `linear-gradient(145deg,${colors.green[600]},${colors.green[450]} 55%,${colors.green[200]})`,
+  `linear-gradient(145deg,${colors.green[550]},${colors.green[350]} 55%,${colors.orange[500]})`,
+  `linear-gradient(145deg,${colors.green[600]},${colors.green[400]} 58%,${colors.green[150]})`,
 ];
 
 function TrailCard({ trail, index }: TrailCardProps) {
@@ -23,16 +25,17 @@ function TrailCard({ trail, index }: TrailCardProps) {
       >
         <Box
           aria-hidden
-          sx={{
+          sx={theme => ({
             position: 'absolute',
             width: 230,
             height: 230,
-            border: '1px solid rgba(255,255,255,.2)',
+            border: 1,
+            borderColor: alpha(theme.palette.background.default, 0.2),
             borderRadius: '43% 57%',
             top: -115,
             right: -65,
             transform: 'rotate(28deg)',
-          }}
+          })}
         />
 
         <Mountain
@@ -63,7 +66,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
             fontSize: 25,
             lineHeight: 1.15,
             fontWeight: 700,
-            color: '#173423',
+            color: 'text.primary',
             mb: 2.25,
           }}
         >
@@ -80,7 +83,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
           >
             <MapPin size={18} />
 
-            <Typography sx={{ color: '#526158', fontSize: 14 }}>
+            <Typography sx={{ color: 'text.secondary', fontSize: 14 }}>
               {trail.location}
             </Typography>
           </Stack>
@@ -97,7 +100,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
             <Typography
               component="time"
               dateTime={trail.date}
-              sx={{ color: '#526158', fontSize: 14 }}
+              sx={{ color: 'text.secondary', fontSize: 14 }}
             >
               {formatTrailDate(trail.date)}
             </Typography>

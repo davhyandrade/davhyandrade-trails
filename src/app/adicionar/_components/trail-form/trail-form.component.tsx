@@ -89,7 +89,7 @@ function TrailForm() {
                 alignItems: 'center',
                 gap: 1,
                 mb: 1,
-                color: '#274534',
+                color: 'text.primary',
                 fontSize: 14,
                 fontWeight: 700,
               }}
@@ -117,7 +117,7 @@ function TrailForm() {
               fullWidth
               sx={{
                 '& .MuiOutlinedInput-root': {
-                  bgcolor: '#FAF8ED',
+                  bgcolor: 'background.soft',
                   borderRadius: 2.5,
                 },
                 '& .MuiInputBase-input': {
@@ -135,7 +135,7 @@ function TrailForm() {
           sx={{
             mt: 1,
             minHeight: 52,
-            bgcolor: '#173E29',
+            bgcolor: 'primary.main',
             borderRadius: 2.5,
             textTransform: 'none',
             fontSize: 16,
