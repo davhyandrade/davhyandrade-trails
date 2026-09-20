@@ -5,11 +5,11 @@ export const trailCardStyles = {
     border: 1,
     borderColor: 'divider',
     bgcolor: 'background.paper',
-    boxShadow: '0 16px 44px rgba(29,55,38,.08)',
+    boxShadow: 1,
     transition: '180ms ease',
     '&:hover': {
       transform: 'translateY(-4px)',
-      boxShadow: '0 22px 56px rgba(29,55,38,.14)',
+      boxShadow: 5,
     },
   },
   art: {
