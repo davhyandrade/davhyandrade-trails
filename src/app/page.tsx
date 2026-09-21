@@ -11,9 +11,9 @@ function HomePage() {
       sx={{
         maxWidth: 1200,
         mx: 'auto',
-        px: { xs: 2.25, sm: 4 },
-        pt: { xs: 5, md: 7 },
-        pb: { xs: 14, md: 9 },
+        px: { xs: 4, sm: 8 },
+        pt: { xs: 10, md: 14 },
+        pb: { xs: 28, md: 18 },
       }}
     >
       <Stack
@@ -21,8 +21,8 @@ function HomePage() {
         sx={{
           justifyContent: 'space-between',
           alignItems: { xs: 'flex-start', sm: 'flex-end' },
-          gap: 3,
-          mb: { xs: 4, md: 5 },
+          gap: 6,
+          mb: { xs: 8, md: 10 },
         }}
       >
         <Box>
@@ -33,7 +33,7 @@ function HomePage() {
               fontWeight: 800,
               letterSpacing: '.16em',
               textTransform: 'uppercase',
-              mb: 1.2,
+              mb: 2,
             }}
           >
             Diário de caminhadas
@@ -65,7 +65,7 @@ function HomePage() {
               borderBottom: 1,
               borderBottomColor: 'primary.light',
               borderRadius: 0,
-              px: 0.25,
+              px: 1,
             }}
           >
             Adicionar trilha

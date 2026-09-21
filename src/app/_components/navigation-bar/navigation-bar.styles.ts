@@ -11,7 +11,7 @@ export const navigationStyles = {
     maxWidth: 1200,
     minHeight: { xs: 76, md: 82 },
     mx: 'auto',
-    px: { xs: 2, md: 4 },
+    px: { xs: 4, md: 8 },
     display: 'flex',
     alignItems: 'center',
     justifyContent: { xs: 'space-around', md: 'space-between' },

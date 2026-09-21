@@ -76,7 +76,7 @@ function TrailForm() {
     >
       <Stack
         sx={{
-          gap: 3,
+          gap: 6,
         }}
       >
         {fields.map(field => (
@@ -87,8 +87,8 @@ function TrailForm() {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1,
-                mb: 1,
+                gap: 2,
+                mb: 2,
                 color: 'text.primary',
                 fontSize: 14,
                 fontWeight: 700,
@@ -122,7 +122,7 @@ function TrailForm() {
                 },
                 '& .MuiInputBase-input': {
                   fontSize: 16,
-                  py: 1.6,
+                  py: 3,
                 },
               }}
             />
@@ -133,7 +133,7 @@ function TrailForm() {
           variant="contained"
           endIcon={<ArrowRight size={18} />}
           sx={{
-            mt: 1,
+            mt: 2,
             minHeight: 52,
             bgcolor: 'primary.main',
             borderRadius: 2.5,

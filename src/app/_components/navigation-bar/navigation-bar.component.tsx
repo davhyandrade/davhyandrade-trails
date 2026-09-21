@@ -27,7 +27,7 @@ function Navigation() {
       <Box sx={navigationStyles.inner}>
         <Stack
           direction="row"
-          spacing={1}
+          spacing={2}
           sx={{
             alignItems: 'center',
             display: { xs: 'none', md: 'flex' },
@@ -62,7 +62,7 @@ function Navigation() {
         <Stack
           direction="row"
           sx={{
-            gap: 0.5,
+            gap: 1,
           }}
         >
           {items.map((item, i) => {
@@ -77,13 +77,13 @@ function Navigation() {
                 sx={{
                   minWidth: { xs: 142, md: 'auto' },
                   minHeight: 48,
-                  px: { xs: 1.5, md: 2.25 },
+                  px: { xs: 3, md: 4.5 },
                   borderRadius: { xs: 2.5, md: 99 },
                   display: 'flex',
                   flexDirection: { xs: 'column', md: 'row' },
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: { xs: 0.25, md: 0.9 },
+                  gap: { xs: 0.5, md: 2 },
                   color: active
                     ? 'secondary.contrastText'
                     : alpha(colors.white[0], 0.72),

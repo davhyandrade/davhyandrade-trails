@@ -1,6 +1,6 @@
 export const trailFormStyles = {
   form: {
-    p: { xs: 2.5, sm: 4 },
+    p: { xs: 4, sm: 8 },
     borderRadius: 4,
     bgcolor: 'background.paper',
     border: 1,
