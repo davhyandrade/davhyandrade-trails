@@ -9,4 +9,5 @@ export const theme = createTheme({
   cssVariables: { disableCssColorScheme: true },
   palette,
   shadows,
+  spacing: 4,
 });
