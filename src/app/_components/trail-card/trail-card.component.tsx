@@ -58,7 +58,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
           Trilha realizada
         </Typography>
       </Box>
-      <Box sx={{ p: 2.75 }}>
+      <Box sx={{ p: 6 }}>
         <Typography
           component="h2"
           sx={{
@@ -67,17 +67,17 @@ function TrailCard({ trail, index }: TrailCardProps) {
             lineHeight: 1.15,
             fontWeight: 700,
             color: 'text.primary',
-            mb: 2.25,
+            mb: 4,
           }}
         >
           {trail.name}
         </Typography>
 
-        <Stack spacing={1}>
+        <Stack spacing={2}>
           <Stack
             direction="row"
             sx={{
-              gap: 1,
+              gap: 2,
               alignItems: 'center',
             }}
           >
@@ -91,7 +91,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
           <Stack
             direction="row"
             sx={{
-              gap: 1,
+              gap: 2,
               alignItems: 'center',
             }}
           >

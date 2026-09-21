@@ -30,7 +30,7 @@ function StickyBanner({
       >
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
-          spacing={1}
+          spacing={2}
           sx={{
             justifyContent: 'center',
             alignItems: 'center',
@@ -50,7 +50,7 @@ function StickyBanner({
       <Slide direction="down" in={triggered} mountOnEnter unmountOnExit>
         <Stack
           direction="row"
-          spacing={2}
+          spacing={4}
           sx={{
             ...stickyBannerStyles.root,
             position: 'fixed',
@@ -58,7 +58,7 @@ function StickyBanner({
             left: 0,
             right: 0,
             color: 'common.white',
-            px: 2,
+            px: 4,
             bgcolor: `${severity}.main`,
           }}
         >

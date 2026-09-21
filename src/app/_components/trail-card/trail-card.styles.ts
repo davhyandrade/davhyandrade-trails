@@ -15,7 +15,7 @@ export const trailCardStyles = {
   art: {
     position: 'relative',
     height: 174,
-    p: 2.5,
+    p: 6,
     display: 'flex',
     alignItems: 'flex-end',
     color: 'common.white',

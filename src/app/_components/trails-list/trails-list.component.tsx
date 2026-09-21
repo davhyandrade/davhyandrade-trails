@@ -30,7 +30,7 @@ function TrailsList() {
       sm: 'repeat(2,1fr)',
       lg: 'repeat(3,1fr)',
     },
-    gap: 3,
+    gap: 6,
   };
 
   if (!hydrated)
@@ -57,15 +57,15 @@ function TrailsList() {
           borderStyle: 'dashed',
           borderColor: alpha(theme.palette.secondary.contrastText, 0.24),
           borderRadius: 4,
-          px: 3,
-          py: 8,
+          px: 6,
+          py: 16,
         })}
       >
         <Footprints size={34} />
         <Typography
           component="h2"
           sx={{
-            mt: 2,
+            mt: 4,
             fontFamily: 'var(--font-display)',
             fontWeight: 700,
             fontSize: 25,
@@ -73,7 +73,7 @@ function TrailsList() {
         >
           Sua próxima memória começa na trilha.
         </Typography>
-        <Typography sx={{ mt: 1, mb: 3, color: '#617067' }}>
+        <Typography sx={{ mt: 2, mb: 6, color: '#617067' }}>
           Ainda não há trilhas registradas neste navegador.
         </Typography>
         <Button
