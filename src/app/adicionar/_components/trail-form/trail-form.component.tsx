@@ -82,17 +82,10 @@ function TrailForm() {
         {fields.map(field => (
           <Box key={field.key}>
             <Typography
+              variant="subtitle2"
               component="label"
               htmlFor={field.key}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 2,
-                mb: 2,
-                color: 'text.primary',
-                fontSize: 14,
-                fontWeight: 700,
-              }}
+              sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}
             >
               {field.icon}
               {field.label}
@@ -120,10 +113,7 @@ function TrailForm() {
                   bgcolor: 'background.soft',
                   borderRadius: 2.5,
                 },
-                '& .MuiInputBase-input': {
-                  fontSize: 16,
-                  py: 3,
-                },
+                '& .MuiInputBase-input': { py: 3 },
               }}
             />
           </Box>
@@ -137,9 +127,6 @@ function TrailForm() {
             minHeight: 52,
             bgcolor: 'primary.main',
             borderRadius: 2.5,
-            textTransform: 'none',
-            fontSize: 16,
-            fontWeight: 700,
           }}
         >
           Registrar trilha

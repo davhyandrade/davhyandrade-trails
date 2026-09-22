@@ -27,31 +27,15 @@ function HomePage() {
       >
         <Box>
           <Typography
-            sx={{
-              color: 'text.secondary',
-              fontSize: 12,
-              fontWeight: 800,
-              letterSpacing: '.16em',
-              textTransform: 'uppercase',
-              mb: 2,
-            }}
+            variant="overline"
+            component="p"
+            color="textSecondary"
+            sx={{ mb: 2 }}
           >
             Diário de caminhadas
           </Typography>
 
-          <Typography
-            component="h1"
-            sx={{
-              color: 'text.primary',
-              fontFamily: 'var(--font-display)',
-              fontSize: { xs: 42, sm: 56 },
-              lineHeight: 0.98,
-              fontWeight: 700,
-              letterSpacing: '-.045em',
-            }}
-          >
-            Minhas trilhas
-          </Typography>
+          <Typography variant="h1">Minhas trilhas</Typography>
         </Box>
 
         <Link href="/adicionar" style={{ textDecoration: 'none' }}>
@@ -60,8 +44,6 @@ function HomePage() {
             endIcon={<ArrowUpRight size={18} />}
             sx={{
               color: 'primary.main',
-              textTransform: 'none',
-              fontWeight: 700,
               borderBottom: 1,
               borderBottomColor: 'primary.light',
               borderRadius: 0,

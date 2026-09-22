@@ -48,12 +48,9 @@ function Navigation() {
           </Box>
 
           <Typography
-            sx={{
-              color: 'primary.contrastText',
-              fontFamily: 'var(--font-display)',
-              fontWeight: 700,
-              fontSize: 24,
-            }}
+            variant="h4"
+            component="span"
+            sx={{ color: 'primary.contrastText' }}
           >
             Trilhas
           </Typography>
@@ -99,10 +96,7 @@ function Navigation() {
               >
                 <Icon size={18} />
 
-                <Typography
-                  component="span"
-                  sx={{ fontSize: { xs: 12, md: 14 }, fontWeight: 700 }}
-                >
+                <Typography variant="subtitle2" component="span">
                   {item.label}
                 </Typography>
               </Box>

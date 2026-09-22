@@ -46,30 +46,15 @@ function TrailCard({ trail, index }: TrailCardProps) {
         />
 
         <Typography
-          sx={{
-            position: 'relative',
-            fontSize: 12,
-            fontWeight: 800,
-            letterSpacing: '.15em',
-            textTransform: 'uppercase',
-            opacity: 0.78,
-          }}
+          variant="overline"
+          component="p"
+          sx={{ position: 'relative', opacity: 0.78 }}
         >
           Trilha realizada
         </Typography>
       </Box>
       <Box sx={{ p: 6 }}>
-        <Typography
-          component="h2"
-          sx={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 25,
-            lineHeight: 1.15,
-            fontWeight: 700,
-            color: 'text.primary',
-            mb: 4,
-          }}
-        >
+        <Typography variant="h4" component="h2" sx={{ mb: 4 }}>
           {trail.name}
         </Typography>
 
@@ -83,7 +68,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
           >
             <MapPin size={18} />
 
-            <Typography sx={{ color: 'text.secondary', fontSize: 14 }}>
+            <Typography variant="body2" color="textSecondary">
               {trail.location}
             </Typography>
           </Stack>
@@ -98,9 +83,10 @@ function TrailCard({ trail, index }: TrailCardProps) {
             <CalendarDays size={18} />
 
             <Typography
+              variant="body2"
               component="time"
+              color="textSecondary"
               dateTime={trail.date}
-              sx={{ color: 'text.secondary', fontSize: 14 }}
             >
               {formatTrailDate(trail.date)}
             </Typography>

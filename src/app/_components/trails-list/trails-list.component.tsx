@@ -62,18 +62,10 @@ function TrailsList() {
         })}
       >
         <Footprints size={34} />
-        <Typography
-          component="h2"
-          sx={{
-            mt: 4,
-            fontFamily: 'var(--font-display)',
-            fontWeight: 700,
-            fontSize: 25,
-          }}
-        >
+        <Typography variant="h4" component="h2" sx={{ mt: 4 }}>
           Sua próxima memória começa na trilha.
         </Typography>
-        <Typography sx={{ mt: 2, mb: 6, color: '#617067' }}>
+        <Typography color="textSecondary" sx={{ mt: 2, mb: 6 }}>
           Ainda não há trilhas registradas neste navegador.
         </Typography>
         <Button
@@ -81,11 +73,7 @@ function TrailsList() {
           href="/adicionar"
           variant="contained"
           endIcon={<ArrowUpRight size={18} />}
-          sx={{
-            bgcolor: 'primary.main',
-            borderRadius: 99,
-            textTransform: 'none',
-          }}
+          sx={{ bgcolor: 'primary.main', borderRadius: 99 }}
         >
           Adicionar a primeira
         </Button>
