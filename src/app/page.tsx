@@ -1,6 +1,5 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
 
 import TrailsList from './_components/trails-list/trails-list.component';
 
@@ -54,23 +53,9 @@ function HomePage() {
           </Typography>
         </Box>
 
-        <Link href="/adicionar" style={{ textDecoration: 'none' }}>
-          <Button
-            component="span"
-            endIcon={<ArrowUpRight size={18} />}
-            sx={{
-              color: 'primary.main',
-              textTransform: 'none',
-              fontWeight: 700,
-              borderBottom: 1,
-              borderBottomColor: 'primary.light',
-              borderRadius: 0,
-              px: 1,
-            }}
-          >
-            Adicionar trilha
-          </Button>
-        </Link>
+        <Button href="/adicionar" endIcon={<ArrowUpRight size={18} />}>
+          Adicionar trilha
+        </Button>
       </Stack>
       <TrailsList />
     </Box>

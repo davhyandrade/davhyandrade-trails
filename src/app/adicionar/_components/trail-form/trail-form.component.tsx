@@ -128,19 +128,13 @@ function TrailForm() {
             />
           </Box>
         ))}
+
         <Button
           type="submit"
           variant="contained"
+          size="large"
           endIcon={<ArrowRight size={18} />}
-          sx={{
-            mt: 2,
-            minHeight: 52,
-            bgcolor: 'primary.main',
-            borderRadius: 2.5,
-            textTransform: 'none',
-            fontSize: 16,
-            fontWeight: 700,
-          }}
+          sx={{ mt: 1 }}
         >
           Registrar trilha
         </Button>

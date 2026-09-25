@@ -1,13 +1,10 @@
 'use client';
 import { Box, Stack, Typography } from '@mui/material';
-import { alpha } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { Footprints, Home, Plus } from 'lucide-react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { colors } from '@/shared/lib/mui/theme/palette/colors/colors.constant';
-
-import { navigationStyles } from './navigation-bar.styles';
+import { NavigationButton, navigationStyles } from './navigation-bar.styles';
 import type { NavigationItem } from './navigation-bar.types';
 
 const items: NavigationItem[] = [
@@ -17,6 +14,7 @@ const items: NavigationItem[] = [
 
 function Navigation() {
   const pathname = usePathname();
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('md'));
 
   return (
     <Box
@@ -68,44 +66,18 @@ function Navigation() {
           {items.map((item, i) => {
             const active = pathname === item.href;
             const Icon = i ? Plus : Home;
-            return (
-              <Box
-                key={item.href}
-                component={Link}
-                href={item.href}
-                aria-current={active ? 'page' : undefined}
-                sx={{
-                  minWidth: { xs: 142, md: 'auto' },
-                  minHeight: 48,
-                  px: { xs: 3, md: 4.5 },
-                  borderRadius: { xs: 2.5, md: 99 },
-                  display: 'flex',
-                  flexDirection: { xs: 'column', md: 'row' },
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: { xs: 0.5, md: 2 },
-                  color: active
-                    ? 'secondary.contrastText'
-                    : alpha(colors.white[0], 0.72),
-                  bgcolor: active ? 'secondary.main' : 'transparent',
-                  textDecoration: 'none',
-                  '&:hover': {
-                    color: active ? 'secondary.contrastText' : 'common.white',
-                    bgcolor: active
-                      ? 'secondary.main'
-                      : alpha(colors.white[0], 0.08),
-                  },
-                }}
-              >
-                <Icon size={18} />
 
-                <Typography
-                  component="span"
-                  sx={{ fontSize: { xs: 12, md: 14 }, fontWeight: 700 }}
-                >
-                  {item.label}
-                </Typography>
-              </Box>
+            return (
+              <NavigationButton
+                key={item.href}
+                href={item.href}
+                variant={isMobile ? 'contained' : 'rounded'}
+                color={active ? 'secondary' : 'ghostOnDark'}
+                aria-current={active ? 'page' : undefined}
+                startIcon={<Icon size={18} />}
+              >
+                {item.label}
+              </NavigationButton>
             );
           })}
         </Stack>

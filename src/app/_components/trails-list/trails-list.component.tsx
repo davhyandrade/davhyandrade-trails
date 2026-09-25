@@ -3,7 +3,6 @@
 import { Box, Button, Skeleton, Stack, Typography } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import { ArrowUpRight, Footprints } from 'lucide-react';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import TrailCard from '@/app/_components/trail-card/trail-card.component';
@@ -73,19 +72,15 @@ function TrailsList() {
         >
           Sua próxima memória começa na trilha.
         </Typography>
-        <Typography sx={{ mt: 2, mb: 6, color: '#617067' }}>
+
+        <Typography sx={{ mt: 2, mb: 6, color: 'text.secondary' }}>
           Ainda não há trilhas registradas neste navegador.
         </Typography>
         <Button
-          component={Link}
           href="/adicionar"
-          variant="contained"
+          variant="rounded"
+          size="small"
           endIcon={<ArrowUpRight size={18} />}
-          sx={{
-            bgcolor: 'primary.main',
-            borderRadius: 99,
-            textTransform: 'none',
-          }}
         >
           Adicionar a primeira
         </Button>

@@ -1,6 +1,5 @@
 import { Box, Button, Typography } from '@mui/material';
 import { ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
 
 import TrailForm from './_components/trail-form/trail-form.component';
 
@@ -16,15 +15,15 @@ function AddTrailPage() {
         pb: { xs: 28, md: 18 },
       }}
     >
-      <Link href="/" style={{ textDecoration: 'none' }}>
-        <Button
-          component="span"
-          startIcon={<ArrowLeft size={18} />}
-          sx={{ color: 'text.secondary', textTransform: 'none', px: 0, mb: 6 }}
-        >
-          Voltar para as trilhas
-        </Button>
-      </Link>
+      <Button
+        href="/"
+        color="inherit"
+        startIcon={<ArrowLeft size={18} />}
+        sx={{ color: 'text.secondary', mb: 3 }}
+      >
+        Voltar para as trilhas
+      </Button>
+
       <Typography
         sx={{
           color: 'text.secondary',
