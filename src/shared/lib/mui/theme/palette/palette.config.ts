@@ -14,9 +14,10 @@ export const palette: PaletteOptions = {
   secondary: {
     light: colors.white[0],
     main: colors.green[50],
-    dark: colors.green[700],
     contrastText: colors.green[700],
   },
+  ghostOnDark: { main: colors.white[0] },
+  ghostOnLight: { main: colors.green[600] },
   background: {
     default: colors.white[0],
     paper: colors.white[50],

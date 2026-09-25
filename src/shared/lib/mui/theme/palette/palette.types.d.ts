@@ -11,4 +11,14 @@ declare module '@mui/material/styles' {
   interface SimplePaletteColorOptions {
     background?: string;
   }
+
+  interface Palette {
+    ghostOnDark: Pick<PaletteColor, 'main'>;
+    ghostOnLight: Pick<PaletteColor, 'main'>;
+  }
+
+  interface PaletteOptions {
+    ghostOnDark?: SimplePaletteColorOptions;
+    ghostOnLight?: SimplePaletteColorOptions;
+  }
 }
