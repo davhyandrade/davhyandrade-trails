@@ -1,22 +1,25 @@
-# Design system
+# Cores
 
-## Ícones
+## Antes de definir uma cor
 
-Os ícones devem ser importados diretamente de `lucide-react` e normalmente usar
-**18px ou 20px**, definidos pela prop `size`.
-Mantenha o mesmo tamanho entre ícones de um mesmo contexto.
+Antes de escrever qualquer cor (hex, rgb, rgba) em código:
 
-```tsx
-import { ArrowRight, MapPin } from 'lucide-react';
+1. Veja se algum campo padrão do MUI já serve (`primary`, `secondary`,
+   `text.primary`/`text.secondary`, `background.default`/`.paper`,
+   `divider`, `common`, `action`, `error`, `info`).
+2. Se precisar de uma variação de opacidade de um tom que já existe, calcule
+   com `alpha()` no ponto de uso — não crie uma cor nova só pra isso.
+3. Só se o tom realmente não existir em
+   `src/shared/lib/mui/theme/palette/colors/colors.constant.ts`: **pare e
+   peça confirmação ao usuário antes de adicionar** o valor novo (proponha o
+   matiz, a posição na escala numerada e o hex) — nunca adicione uma cor nova
+   à palette sem aprovação explícita.
 
-<ArrowRight size={18} />
-<MapPin size={20} />
-```
+Nunca escreva um hex/rgba solto direto num componente ou `.css`; toda cor
+passa por `colors.constant.ts` → `palette.config.ts` (ou por `alpha()`/
+`theme.shadows` no ponto de uso).
 
-Outros tamanhos são permitidos quando o contexto exigir, como em ilustrações
-decorativas. Trate esses casos como exceções ao padrão.
-
-## Cores
+## Palette
 
 A `palette` do tema MUI é o contrato de cores do projeto. Sua configuração
 fica em `src/shared/lib/mui/theme/palette/palette.config.ts`. O arquivo
@@ -74,7 +77,7 @@ const gradient = `linear-gradient(145deg,${colors.green[600]},${colors.green[450
 As sombras seguem o mesmo princípio: em vez de uma extensão de palette,
 `src/shared/lib/mui/theme/shadows/shadows.config.ts` clona o array padrão de
 elevações do MUI (`theme.shadows`, 25 entradas) e sobrescreve só os índices
-que o projeto usa (`1`, `3`, `5`) com os tons de sombra do design. 
+que o projeto usa (`1`, `3`, `5`) com os tons de sombra do design.
 
 ```ts
 import { shadows } from '@/shared/lib/mui/theme/shadows/shadows.config';
@@ -95,7 +98,7 @@ sobre um valor de `colors`:
 import { alpha } from '@mui/material/styles';
 import { colors } from '@/shared/lib/mui/theme/palette/colors/colors.constant';
 
-bgcolor: alpha(colors.white[0], 0.08), 
+bgcolor: alpha(colors.white[0], 0.08),
 ```
 
 Já dentro de um Client Component, se o `sx` já está como callback (recebendo
@@ -107,3 +110,5 @@ sx={theme => ({
   borderColor: alpha(theme.palette.secondary.contrastText, 0.24),
 })}
 ```
+
+[Voltar ao índice do design system](README.md).
