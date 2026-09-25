@@ -1,3 +1,17 @@
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+
+export const NavigationButton = styled(Button)(({ theme }) => ({
+  [theme.breakpoints.down('md')]: {
+    minWidth: 142,
+    minHeight: 48,
+    padding: theme.spacing(0, 3),
+    flexDirection: 'column',
+    gap: theme.spacing(0.5),
+    fontSize: theme.typography.pxToRem(12),
+  },
+}));
+
 export const navigationStyles = {
   root: {
     position: { xs: 'fixed', md: 'sticky' },
