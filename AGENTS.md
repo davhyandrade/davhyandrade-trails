@@ -2,24 +2,18 @@
 
 ## Design system
 
-Antes de escrever qualquer cor (hex, rgb, rgba) em código:
+Antes de criar ou alterar qualquer elemento visual:
 
-1. Veja se algum campo padrão do MUI já serve (`primary`, `secondary`,
-   `text.primary`/`text.secondary`, `background.default`/`.paper`,
-   `divider`, `common`, `action`, `error`, `info`).
-2. Se precisar de uma variação de opacidade de um tom que já existe, calcule
-   com `alpha()` no ponto de uso — não crie uma cor nova só pra isso.
-3. Só se o tom realmente não existir em
-   `src/shared/lib/mui/theme/palette/colors/colors.constant.ts`: **pare e
-   peça confirmação ao usuário antes de adicionar** o valor novo (proponha o
-   matiz, a posição na escala numerada e o hex) — nunca adicione uma cor nova
-   à palette sem aprovação explícita.
+1. Consulte o [índice do design system](docs/design-system/README.md) e seus
+   princípios gerais.
+2. Leia os módulos aplicáveis à tarefa antes de escrever código. Consulte
+   todos os assuntos envolvidos, como botões, links, ícones e cores.
+3. Siga as regras consultadas ao escolher componentes, variantes, cores,
+   tipografia, espaçamento e estados. Reutilize a configuração do tema.
 
-Nunca escreva um hex/rgba solto direto num componente ou `.css`; toda cor
-passa por `colors.constant.ts` → `palette.config.ts` (ou por `alpha()`/
-`theme.shadows` no ponto de uso).
-
-Referência completa: [docs/design-system.md](docs/design-system.md).
+A consulta é obrigatória também para alterações em elementos existentes.
+Para mudanças de cor, siga o módulo de cores, inclusive a exigência de
+aprovação explícita antes de adicionar um novo tom à palette.
 
 ## Commits
 
