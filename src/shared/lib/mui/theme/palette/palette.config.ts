@@ -19,12 +19,9 @@ export const palette: PaletteOptions = {
   ghostOnDark: { main: colors.white[0] },
   ghostOnLight: { main: colors.green[600] },
   background: {
-    default: colors.white[0],
+    default: colors.white[150],
     paper: colors.white[50],
-    dark: colors.white[150],
     soft: colors.white[100],
-    glowStart: alpha(colors.green[100], 0.16),
-    glowEnd: alpha(colors.green[500], 0.08),
   },
   text: {
     primary: colors.green[700],
