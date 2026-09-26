@@ -56,6 +56,7 @@ function TrailsList() {
           borderStyle: 'dashed',
           borderColor: alpha(theme.palette.secondary.contrastText, 0.24),
           borderRadius: 4,
+          bgcolor: 'background.soft',
           px: 6,
           py: 16,
         })}
