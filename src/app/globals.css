@@ -6,25 +6,9 @@
   box-sizing: border-box;
 }
 
-html {
-  background: var(--mui-palette-background-dark);
-}
-
 body {
   margin: 0;
   min-height: 100dvh;
-  background:
-    radial-gradient(
-      circle at 8% 3%,
-      var(--mui-palette-background-glowStart),
-      transparent 24rem
-    ),
-    radial-gradient(
-      circle at 92% 90%,
-      var(--mui-palette-background-glowEnd),
-      transparent 28rem
-    ),
-    var(--mui-palette-background-dark);
   color: var(--mui-palette-text-primary);
   font-family: Arial, Helvetica, sans-serif;
 }

@@ -30,7 +30,7 @@ function TrailCard({ trail, index }: TrailCardProps) {
             width: 230,
             height: 230,
             border: 1,
-            borderColor: alpha(theme.palette.background.default, 0.2),
+            borderColor: alpha(theme.palette.common.white, 0.2),
             borderRadius: '43% 57%',
             top: -115,
             right: -65,
