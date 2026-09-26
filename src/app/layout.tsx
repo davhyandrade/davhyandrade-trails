@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 import MuiProvider from '@/shared/lib/mui/theme/providers/mui.provider';
 
-import Navigation from './_components/navigation-bar/navigation-bar.component';
+import NavigationBar from './_components/navigation-bar/navigation-bar.component';
 
 export const metadata: Metadata = {
   title: 'Caminhos percorridos',
@@ -17,7 +17,7 @@ function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     <html lang="pt-BR">
       <body>
         <MuiProvider>
-          <Navigation />
+          <NavigationBar />
           {children}
         </MuiProvider>
       </body>
