@@ -29,7 +29,8 @@ function TrailsList() {
       sm: 'repeat(2,1fr)',
       lg: 'repeat(3,1fr)',
     },
-    gap: 6,
+    columnGap: 6,
+    rowGap: 12,
   };
 
   if (!hydrated)
