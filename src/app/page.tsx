@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -9,12 +11,13 @@ function HomePage() {
     <>
       <Box
         component="main"
-        sx={{
+        sx={theme => ({
           maxWidth: 1200,
           mx: 'auto',
           p: { xs: 4, sm: 8 },
           pt: { xs: 10, md: 14 },
-        }}
+          backgroundImage: `radial-gradient(ellipse  at 50% 50%, ${theme.palette.common.white}, transparent 65%)`,
+        })}
       >
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
