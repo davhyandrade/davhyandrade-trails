@@ -2,6 +2,7 @@
 
 import { createTheme } from '@mui/material/styles';
 
+import { breakpoints } from './breakpoints/breakpoints.config';
 import { components } from './components/components.config';
 import { mixins } from './mixins/mixins.config';
 import { palette } from './palette/palette.config';
@@ -16,4 +17,5 @@ export const theme = createTheme({
   shadows,
   spacing: 4,
   mixins,
+  breakpoints,
 });
