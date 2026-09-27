@@ -28,7 +28,7 @@ function NavigationBarDesktop() {
         sx={{
           width: '100%',
           maxWidth: 'lg',
-          px: 8,
+          mx: 8,
           py: 4,
           alignItems: 'center',
           justifyContent: 'space-between',
