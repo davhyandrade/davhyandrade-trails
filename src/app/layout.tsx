@@ -1,5 +1,3 @@
-import './globals.css';
-
 import type { Metadata } from 'next';
 
 import MuiProvider from '@/shared/lib/mui/theme/providers/mui.provider';

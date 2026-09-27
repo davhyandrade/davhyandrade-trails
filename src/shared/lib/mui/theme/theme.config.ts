@@ -10,7 +10,6 @@ import { shadows } from './shadows/shadows.config';
 import { typography } from './typography/typography.config';
 
 export const theme = createTheme({
-  cssVariables: { disableCssColorScheme: true },
   components,
   palette,
   typography,
