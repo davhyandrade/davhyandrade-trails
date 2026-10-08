@@ -15,13 +15,20 @@ export const watchForUpdates = (
   registration: ServiceWorkerRegistration,
   onUpdateReady: (worker: ServiceWorker) => void,
 ) => {
-  registration.addEventListener('updatefound', () => {
-    const newWorker = registration.installing;
+  const trackWorker = (worker: ServiceWorker) => {
+    if (isUpdateReady(worker)) {
+      onUpdateReady(worker);
+      return;
+    }
 
-    if (!newWorker) return;
-
-    newWorker.addEventListener('statechange', () => {
-      if (isUpdateReady(newWorker)) onUpdateReady(newWorker);
+    worker.addEventListener('statechange', () => {
+      if (isUpdateReady(worker)) onUpdateReady(worker);
     });
+  };
+
+  if (registration.installing) trackWorker(registration.installing);
+
+  registration.addEventListener('updatefound', () => {
+    if (registration.installing) trackWorker(registration.installing);
   });
 };

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import type { BeforeInstallPromptEvent } from './pwa-manager.types';
 import { isStandalone, watchForUpdates } from './pwa-manager.utils';
@@ -14,10 +14,15 @@ export function usePwaManager() {
     null,
   );
 
+  const updateRequestedRef = useRef(false);
+
   useEffect(() => {
     const handleOnline = () => setIsOffline(false);
     const handleOffline = () => setIsOffline(true);
-    const handleControllerChange = () => window.location.reload();
+    const handleAppInstalled = () => setInstallPrompt(null);
+    const handleControllerChange = () => {
+      if (updateRequestedRef.current) window.location.reload();
+    };
     const handleInstallPrompt = (event: Event) => {
       event.preventDefault();
 
@@ -29,6 +34,7 @@ export function usePwaManager() {
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
     window.addEventListener('beforeinstallprompt', handleInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
 
     const initialStateFrame = window.requestAnimationFrame(() => {
       setIsOffline(!navigator.onLine);
@@ -46,7 +52,6 @@ export function usePwaManager() {
       navigator.serviceWorker.addEventListener(
         'controllerchange',
         handleControllerChange,
-        { once: true },
       );
 
       navigator.serviceWorker
@@ -65,6 +70,7 @@ export function usePwaManager() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
       window.removeEventListener('beforeinstallprompt', handleInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
       window.cancelAnimationFrame(initialStateFrame);
 
       if ('serviceWorker' in navigator) {
@@ -96,7 +102,10 @@ export function usePwaManager() {
   };
 
   const handleUpdate = () => {
-    waitingWorker?.postMessage({ type: 'SKIP_WAITING' });
+    if (!waitingWorker) return;
+
+    updateRequestedRef.current = true;
+    waitingWorker.postMessage({ type: 'SKIP_WAITING' });
   };
 
   return {
