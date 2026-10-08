@@ -2,7 +2,7 @@ import initialTrails from '@/app/_data/trails.json';
 
 import type { Trail } from './trails.types';
 
-const STORAGE_KEY = 'trilhas:trails';
+const STORAGE_KEY = 'trails:list';
 
 export function getTrails(): Trail[] {
   if (typeof window === 'undefined') return [];
